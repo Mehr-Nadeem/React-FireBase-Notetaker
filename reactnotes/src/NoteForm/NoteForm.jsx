@@ -37,13 +37,21 @@ class NoteForm extends Component{
         })
     }
 
+    enterPressed(event){
+        var code = event.keyCode || event.which;
+        if(code === 13){
+            this.writeNote();
+        }
+    }
+
     render(){
         return(
             <div className="formWrapper">
                 <input className="noteInput"
                        placeholder="Write a new note..."
                        value={this.state.newNoteContent}
-                       onChange={this.handleUserInput}/>
+                       onChange={this.handleUserInput}
+                       onKeyPress={this.enterPressed.bind(this)}/>
                 <button className="noteButton"
                         onClick={this.writeNote}>Add Note</button>
             </div>
