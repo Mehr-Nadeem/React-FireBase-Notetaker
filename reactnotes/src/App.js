@@ -63,7 +63,7 @@ class App extends Component {
     return (
         <div className="notesWrapper">
             <div className="notesHeader">
-                <div className="heading">React/Firebase Notetaker</div>
+                <div className="heading">NoteChat</div>
             </div>
             <div className="notesBody">
                 {
